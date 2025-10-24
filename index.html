@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PGD Đường&nbsp;9 – Quản lý công việc</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Supabase client via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.30.0/dist/umd/supabase-js.min.js"></script>
+  <!-- SortableJS for drag and drop -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+  <!-- Authentication form -->
+  <div id="auth-container">
+    <h2>Đăng nhập/đăng ký</h2>
+    <div class="auth-form">
+      <input type="email" id="auth-email" placeholder="Email" />
+      <input type="password" id="auth-password" placeholder="Mật khẩu" />
+      <button id="login-btn">Đăng nhập</button>
+      <button id="signup-btn">Đăng ký</button>
+      <p id="auth-msg"></p>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div id="app" style="display:none;">
+    <header>
+      <h1>Kế hoạch công việc PGD Đường&nbsp;9</h1>
+      <button id="logout-btn">Đăng xuất</button>
+    </header>
+
+    <!-- New task form -->
+    <section id="new-task">
+      <h3>Tạo công việc mới</h3>
+      <input type="text" id="task-title" placeholder="Tiêu đề công việc" />
+      <textarea id="task-desc" placeholder="Mô tả công việc"></textarea>
+      <input type="date" id="task-due" />
+      <!-- Người nhận công việc: nhập email, bỏ trống để giao cho chính mình -->
+      <input type="text" id="task-assigned" placeholder="Giao cho (Email cán bộ)" />
+      <button id="add-task-btn">Thêm công việc</button>
+      <p id="task-msg"></p>
+    </section>
+
+    <!-- Kanban board -->
+    <section id="board">
+      <!-- To‑Do column -->
+      <div class="column" data-status="todo">
+        <h3>To‑Do</h3>
+        <ul class="task-list" id="todo-list"></ul>
+      </div>
+      <!-- Doing column -->
+      <div class="column" data-status="doing">
+        <h3>Doing</h3>
+        <ul class="task-list" id="doing-list"></ul>
+      </div>
+      <!-- Block column -->
+      <div class="column" data-status="block">
+        <h3>Block</h3>
+        <ul class="task-list" id="block-list"></ul>
+      </div>
+      <!-- Done column -->
+      <div class="column" data-status="done">
+        <h3>Done</h3>
+        <ul class="task-list" id="done-list"></ul>
+      </div>
+    </section>
+
+    <!-- Export button -->
+    <button id="export-btn">Xuất CSV</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
