@@ -1,0 +1,215 @@
+/* Styles for PGDD9 plan web app */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+#auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#auth-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-form button {
+  width: 48%;
+  padding: 10px;
+  margin: 8px 1%;
+  border: none;
+  background-color: #0073e6;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #005bb5;
+}
+
+#auth-msg {
+  color: red;
+  min-height: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004b8d;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header button {
+  background: #e53935;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: #c62828;
+}
+
+#new-task {
+  margin: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#new-task h3 {
+  margin-top: 0;
+}
+
+#new-task input,
+#new-task textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#new-task button {
+  background: #00897b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+#new-task button:hover {
+  background: #00695c;
+}
+
+#task-msg {
+  color: red;
+  min-height: 20px;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.column {
+  flex: 1;
+  min-width: 240px;
+  background: #eceff1;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column h3 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Column header colors */
+.column[data-status="todo"] h3 {
+  background: #90caf9;
+  color: #0d47a1;
+}
+.column[data-status="doing"] h3 {
+  background: #fff59d;
+  color: #f57f17;
+}
+.column[data-status="block"] h3 {
+  background: #ef9a9a;
+  color: #b71c1c;
+}
+.column[data-status="done"] h3 {
+  background: #b2dfdb;
+  color: #004d40;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  flex-grow: 1;
+  min-height: 150px;
+}
+
+.task-card {
+  background: #fff;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+/* Card colors based on status */
+.task-card.todo {
+  border-left: 5px solid #42a5f5;
+}
+.task-card.doing {
+  border-left: 5px solid #fdd835;
+}
+.task-card.block {
+  border-left: 5px solid #e53935;
+}
+.task-card.done {
+  border-left: 5px solid #26a69a;
+}
+
+.task-card small {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+}
+
+#export-btn {
+  margin: 20px;
+  padding: 8px 12px;
+  border: none;
+  background: #5e35b1;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#export-btn:hover {
+  background: #4527a0;
+}
