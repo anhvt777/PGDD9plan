@@ -7,8 +7,8 @@
  *   const SUPABASE_URL = 'https://abcdxyz.supabase.co';
  *   const SUPABASE_ANON_KEY = 'eyJhbGciOiJ...';
  */
-const SUPABASE_URL = 'YOUR_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://rrfkmvrkvvzobyokuvzp.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyZmttdnJrdnZ6b2J5b2t1dnpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkzNzc3MTQsImV4cCI6MjA3NDk1MzcxNH0.l_rsvKnNV5HfkdScIThB89s9ocqYdL8LtHGVHla4-jU';
 
 // Khởi tạo client Supabase
 const { createClient } = supabase;
